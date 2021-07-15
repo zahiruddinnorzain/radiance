@@ -1,0 +1,14 @@
+# INSTALLATION GUIDE
+rm -rf .git
+python3 -m venv env
+source -m venv env
+pip3 install -r requirements.txt
+
+# RUN
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+# curl --header "Content-Type: application/json" --request POST --data '{"username": "john", "password": "secretpassword"}' localhost:8000/register
+
+# if error, install this
+sudo apt-get install libpq-dev
+pip3 install wheel
